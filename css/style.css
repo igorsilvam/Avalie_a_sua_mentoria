@@ -55,15 +55,18 @@ header h1 {
   text-transform: uppercase;
   font-family: var(--ff-staatliches);
   line-height: 4.5rem;
+  animation: topdown 700ms;
 }
 
 header p {
   font-size: var(--fs-sub-theme);
   line-height: 2.4rem;
+  animation: topdown 700ms;
 }
 
 header img {
   margin: 1.7rem auto 3.2rem;
+  animation: downtop 700ms 350ms backwards;
 }
 
 .top {
@@ -220,4 +223,28 @@ button {
     padding: 1.25rem 28.6rem;
     cursor: pointer;
     margin: 3rem auto;
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes downtop{
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
