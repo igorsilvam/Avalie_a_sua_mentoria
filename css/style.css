@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --cl-white: hsl(0, 0%, 100%);
+  --cl-red: hsl(6, 89%, 69%);
+  --cl-black: hsl(210, 37%, 23%);
+  --cl-extra-black: hsl(218, 23%, 21%);
+  --cl-smal-black: hsl(258, 9%, 32%);
+  --cl-smal-gray: hsl(240, 33%, 99%);
+  --cl-gray: hsl(258, 14%, 77%);
+  --cl-blue: hsl(202, 41%, 82%);
+  --fs-theme: 3.6rem;
+  --fs-sub-theme: 1.6rem;
+  --fs-title: 2.4rem;
+  --fs-info: 1.4rem;
+  --fs-import: 1.2rem;
+  --fs-button: 2rem;
+  --ff-poppins: "Poppins", sans-serif;
+  --ff-staatliches: "Staatliches", cursive;
+}
+
+body {
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-info);
+  background: var(--cl-blue);
+}
+
+body::before {
+  content: "";
+  background: var(--cl-extra-black);
+  position: absolute;
+  height: 46.5rem;
+  width: 100%;
+}
+
+.page {
+  margin: 0 auto;
+  width: 750px;
+  position: relative;
+}
+
+header {
+  text-align: center;
+  color: var(--cl-white);
+  padding-top: 10.7rem;
+}
+
+header h1 {
+  font-size: var(--fs-theme);
+  text-transform: uppercase;
+  font-family: var(--ff-staatliches);
+  line-height: 4.5rem;
+}
+
+header p {
+  font-size: var(--fs-sub-theme);
+  line-height: 2.4rem;
+}
+
+header img {
+  margin: 1.7rem auto 3.2rem;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 13.4rem;
+  background: var(--cl-red);
+  border-radius: 20px 20px 0px 0px;
+}
+
+.top h2 {
+  text-transform: uppercase;
+  font-family: var(--ff-staatliches);
+  font-size: var(--fs-title);
+  line-height: 3.4rem;
+}
+
+.my-form {
+  display: flex;
+  flex-direction: column;
+  padding: 3.16rem 6.4rem;
+  background: var(--cl-white);
+  gap: 3rem;
+  margin-bottom: 25rem;
+  border-radius: 0px 0px 20px 20px;
+}
+
+fieldset {
+  border: none;
+  width: 62.2rem;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fieldset-wrapper legend {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--cl-black);
+  font-family: var(--ff-staatliches);
+  font-size: var(--fs-title);
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid #e6e6f0;
+  margin-bottom: 3.1rem;
+}
+
+.identity {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.identity > div {
+  width: 100%;
+}
+
+.input-wrapper label {
+  color: var(--cl-smal-black);
+  font-size: var(--fs-info);
+  line-height: 2.4rem;
+}
+
+.input-wrapper span {
+  color: var(--cl-gray);
+  font-size: var(--fs-import);
+}
+
+.input-wrapper input,
+.input-wrapper select,
+.input-wrapper textarea {
+  border: 1px solid #e6e6f0;
+  background: var(--cl-smal-gray);
+  border-radius: 0.8rem;
+  height: 5.55rem;
+  width: 100%;
+  padding: 0 2.4rem;
+}
+
+.input-wrapper input:invalid {
+    border: 1px solid #F67669;
+}
+
+.input-wrapper select {
+  width: 50%;
+  margin-right: 50%;
+}
+
+.fieldset-wrapper .input-wrapper textarea {
+  height: 16.65rem;
+  resize: none;
+  padding-top: 1rem;
+}
+
+.schedule {
+    display: flex;
+    gap: 1rem;
+}
+
+.schedule div:nth-child(1) {
+    margin-right: 2.2rem;
+}
+
+.checkbox-wrapper {
+  position: relative;
+}
+
+.checkbox-wrapper label {
+  display: flex;
+  color: var(--cl-smal-black);
+  font-size: var(--fs-info);
+  line-height: 2.4rem;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+}
+
+.checkbox-wrapper input {
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-wrapper label::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #e6e6f0;
+}
+
+.checkbox-wrapper input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.00016 16.1698L4.83016 11.9998L3.41016 13.4098L9.00016 18.9998L21.0002 6.99984L19.5902 5.58984L9.00016 16.1698Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+}
+
+.checkbox-wrapper input:focus + label::before {
+  outline: 1px solid black;
+}
+
+button {
+    align-items: center;
+    background: var(--cl-red);
+    color: var(--cl-white);
+    font-family: var(--ff-staatliches);
+    font-size: var(--fs-button);
+    border: none;
+    border-radius: 0.8rem;
+    padding: 1.25rem 28.6rem;
+    cursor: pointer;
+    margin: 3rem auto;
+}
