@@ -13,7 +13,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O projeto Avalie a sua mentoria foi um desafio proposto para treinar a prática em criar um formulário nele você pode avaliar sua mentoria e agendar o próximo horário com um mentor , ele foi elaborado na aula do programa Explorer da Rocketseat.
 
-- [Página](https://igorsilvamedeiros.github.io/Avalie_a_sua_mentoria/)
+- [Página](https://igorsilvam.github.io/Avalie_a_sua_mentoria/)
 
 ## 🔖 Layout
 
